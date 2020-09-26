@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		F00167C424F40A9700232FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00167C224F40A9700232FFF /* Main.storyboard */; };
 		F00167C624F40A9800232FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00167C524F40A9800232FFF /* Assets.xcassets */; };
 		F00167C924F40A9800232FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00167C724F40A9800232FFF /* LaunchScreen.storyboard */; };
+		F036782B251E7F1A00A63C6C /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F036782A251E7F1A00A63C6C /* CircularTimerView.swift */; };
+		F036782E251E806C00A63C6C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F036782D251E806C00A63C6C /* Lottie */; };
+		F09E0DCF251FE69100BA082A /* timer_lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = F09E0DCE251FE69000BA082A /* timer_lottie.json */; };
+		F09E0DD2251FE9E400BA082A /* LottieAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E0DD1251FE9E400BA082A /* LottieAnimatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		F00167C524F40A9800232FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F00167C824F40A9800232FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00167CA24F40A9800232FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F036782A251E7F1A00A63C6C /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
+		F09E0DCE251FE69000BA082A /* timer_lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timer_lottie.json; sourceTree = "<group>"; };
+		F09E0DD1251FE9E400BA082A /* LottieAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F036782E251E806C00A63C6C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,8 @@
 		F00167BB24F40A9700232FFF /* CircularTimerExample */ = {
 			isa = PBXGroup;
 			children = (
+				F09E0DD0251FE99800BA082A /* Generalized Implementation */,
+				F09E0DCE251FE69000BA082A /* timer_lottie.json */,
 				F00167BC24F40A9700232FFF /* AppDelegate.swift */,
 				F00167BE24F40A9700232FFF /* SceneDelegate.swift */,
 				F00167C024F40A9700232FFF /* ViewController.swift */,
@@ -63,8 +73,17 @@
 				F00167C524F40A9800232FFF /* Assets.xcassets */,
 				F00167C724F40A9800232FFF /* LaunchScreen.storyboard */,
 				F00167CA24F40A9800232FFF /* Info.plist */,
+				F036782A251E7F1A00A63C6C /* CircularTimerView.swift */,
 			);
 			path = CircularTimerExample;
+			sourceTree = "<group>";
+		};
+		F09E0DD0251FE99800BA082A /* Generalized Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				F09E0DD1251FE9E400BA082A /* LottieAnimatable.swift */,
+			);
+			path = "Generalized Implementation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = CircularTimerExample;
+			packageProductDependencies = (
+				F036782D251E806C00A63C6C /* Lottie */,
+			);
 			productName = CircularTimerExample;
 			productReference = F00167B924F40A9700232FFF /* CircularTimerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = F00167B024F40A9700232FFF;
+			packageReferences = (
+				F036782C251E806C00A63C6C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = F00167BA24F40A9700232FFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +152,7 @@
 			files = (
 				F00167C924F40A9800232FFF /* LaunchScreen.storyboard in Resources */,
 				F00167C624F40A9800232FFF /* Assets.xcassets in Resources */,
+				F09E0DCF251FE69100BA082A /* timer_lottie.json in Resources */,
 				F00167C424F40A9700232FFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +166,9 @@
 			files = (
 				F00167C124F40A9700232FFF /* ViewController.swift in Sources */,
 				F00167BD24F40A9700232FFF /* AppDelegate.swift in Sources */,
+				F09E0DD2251FE9E400BA082A /* LottieAnimatable.swift in Sources */,
 				F00167BF24F40A9700232FFF /* SceneDelegate.swift in Sources */,
+				F036782B251E7F1A00A63C6C /* CircularTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F036782C251E806C00A63C6C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F036782D251E806C00A63C6C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F036782C251E806C00A63C6C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F00167B124F40A9700232FFF /* Project object */;
 }
